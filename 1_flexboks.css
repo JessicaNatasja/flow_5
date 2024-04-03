@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ffffff; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.boks1,.boks2,.boks3,.boks4,.boks5{
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boks1{
+    background-color: antiquewhite;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.boks2{
+    background-color:rgb(250, 220, 181);
+    height: 300px;
+}
+
+.boks3{
+    background-color: rgb(239, 179, 101);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    /* gab gøre der kommer luft imellem mini og ikke hele vejen rundt */
+    gap: 15px;
+}
+
+.boks4{
+    background-color: rgb(250, 220, 181);
+    height: 300px;
+}
+
+.boks5{
+    background-color: antiquewhite;
+    height: 55px;
+
+}
+
+/* mini bokse i boks1 */
+.logo{
+    background-color: rgb(150, 209, 249);
+    height: 30px;
+    width: 50px;
+}
+.nav{
+    background-color: rgb(150, 209, 249);
+    height: 30px;
+    width: 50px;
+}
+
+/* mini bokse i boks3 */
+.tilbud1{
+    background-color: rgb(150, 209, 249);
+    width: 30px;
+    height: 50px;
+    margin: 0 0 0 10px ;
+    
+}
+.tilbud2{
+    background-color: rgb(150, 209, 249);
+    width: 30px;
+    height: 90px;
+}
+.tilbud3{
+    background-color: rgb(150, 209, 249);
+    width: 30px;
+    height: 150px;
+    margin: 0 10px 0 0 ;
+}
+
+
+.logo,.nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+
+} 
+.tilbud1,.tilbud2,.tilbud3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 1051px){
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .boks1,.boks3,.boks5{
+        width: 100%;
+    }
+    
+    .boks3{
+        /* viser mini i omven rekefølge */
+        flex-direction: row-reverse;
+    }
+
+    .boks3, .boks5{
+        /* du kan give den en anden rekefølge, ved minus kommer den foran og plus kommer de længer ned */
+        order: 1;
+    }
+
+    .boks2, .boks4{
+        flex-basis: 0;
+        flex-grow:1;
+    }
+
+    .nav{
+        width: 650px;
+    }
+
+}
