@@ -1,0 +1,11 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card{
+    border: solid black 2px;
+}
+
+.btn-danger {
+    background: #d63384;;  
+}
