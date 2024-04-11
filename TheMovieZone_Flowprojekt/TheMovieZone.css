@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.top{
+    background-color: rgb(22, 198, 175);
+    padding: 10px;
+    /* skal man skrive ellers laver den ikke grid  */
+    display: grid;
+    gap: 10px;
+    /* man tegner hvordan man ville have det sat op / og . giver et mellemrum  */
+    grid-template-areas: 
+        "logo logo"
+        "knap knap";
+    
+}
+.logo{
+    grid-area: logo;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+.knapper{
+    grid-area: knap;
+    display: flex;
+    justify-content: space-evenly;
+}
+.knapper a {
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    text-decoration: none;
+}
+.knapper a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 15px auto;
+    /* skal man skrive ellers laver den ikke grid  */
+    display: grid;
+    gap: 15px;
+    /* man tegner hvordan man ville have det sat op / og . giver et mellemrum  */
+    grid-template-areas: 
+        "os       os " 
+        "tekst1   tekst1"
+        "imgB     imgB"
+        "tekst2   tekst2"
+        "os1      os1"
+        "h2       h2"
+        "blok1    blok1"
+        "blok2    blok2"
+        "blok3    blok3"
+        "blok4    blok4"
+        "blok5    blok5"
+        "blok6    blok6";
+    
+}
+
+.overskrift{
+    grid-area: os;
+    display: flex;
+    justify-content: center;
+}
+
+.fuldtekst{
+    display: none;
+    grid-area: fuldT;
+}
+
+.tekst1{
+    grid-area: tekst1;
+}
+
+.imgB{
+    grid-area: imgB;
+}
+
+.tekst2{
+    grid-area: tekst2;
+}
+
+.h1{
+    grid-area: os1;
+    display: flex;
+    justify-content: center;
+}
+
+.h2{
+    grid-area: h2;
+    display: flex;
+    justify-content: center;
+}
+
+
+.blok{
+    background-color: rgb(28, 16, 118);
+    color: white;
+    padding: 2%;
+}
+.en{
+    grid-area: blok1;
+}
+
+.to{
+    grid-area: blok2;
+}
+
+.tre{
+    grid-area: blok3;
+}
+
+.fire{
+    grid-area: blok4;
+}
+
+.fem{
+    grid-area: blok5;
+}
+
+.seks{
+    grid-area: blok6;
+}
+
+.footer{
+    background-color: rgb(22, 198, 175);
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+
+
+@media screen and (min-width: 900px){
+    
+    .container{
+        grid-template-areas: 
+        "os       os " 
+        "tekst1   imgB"
+        "tekst1   imgB"
+        "tekst2   imgB"
+        "tekst2   imgB"
+        "os1      os1"
+        "h2       h2"
+        "blok1    blok2"
+        "blok3    blok4"
+        "blok5    blok6";
+    }
+    
+}
+
+@media screen and (min-width: 1280px){
+
+    .fuldtekst{
+        display: block;
+        grid-area: fuldT;
+    }
+    .tekst1, .tekst2{
+        display: none;
+    }
+    .container{
+        grid-template-areas: 
+        "os     os     os1    os1" 
+        ".      .       h2    h2"
+        "imgB   imgB   blok1  blok4"
+        "fuldT fuldT blok2  blok5"
+        "fuldT fuldT blok3  blok6";
+    }
+
+}
